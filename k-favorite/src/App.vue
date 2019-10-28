@@ -1,30 +1,31 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>{{ now }}</p>
+  <div id="app">
+    <img width="25%" src="./assets/logo.png">
+    <HelloWorld/>
+    <KBase/>
   </div>
 </template>
 
 <script>
+import HelloWorld from "./components/HelloWorld";
+import KBase from  "./components/KBase";
+
 export default {
-  name: "Hello Vue",
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      now: new Date()
-    };
-  },
-  methods: {
-    updateDate() {
-      this.now = new Date();
-    }
-  },
-  mounted() {
-    setInterval(() => {
-      this.updateDate();
-    }, 100);
+  name: "App",
+  components: {
+    HelloWorld,
+    KBase
   }
 };
 </script>
+
+<style>
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
