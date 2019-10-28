@@ -1,5 +1,5 @@
 # k-favorite
-
+This App is about Calculating the every day moments and favorite locations of Mr.K 
 ## Project setup
 ```
 npm install
