@@ -1,20 +1,27 @@
 <template>
   <div id="app">
     <img width="25%" src="./assets/logo.png">
-    <HelloWorld/>
-    <KBase/>
+    <!-- <HelloWorld/> -->
+        <RwvHeader />
+    <router-view></router-view>
+    <RwvFooter />
+    <!-- <KBase/> -->
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
 import KBase from  "./components/KBase";
+import RwvHeader from "@/components/TheHeader";
+import RwvFooter from "@/components/TheFooter";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
-    KBase
+    KBase,
+    RwvHeader,
+    RwvFooter
   }
 };
 </script>
